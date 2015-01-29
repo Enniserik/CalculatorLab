@@ -57,48 +57,66 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     
+                    <h3>Area of Rectangle</h3>
                     <form id="form1" name="form1" method="POST" action="<%= request.getContextPath() %>\calculator3?type=rect">
                         <h3>Length: </h3><input id="length" name="length" type="text" value="<%= length %>"/>
                         <h3>Width: </h3><input id="width" name="width" type="text" value="<%= width %>"/><br><br>
-                        <input class="btn" id="submit" name="submit" type="submit" value="Submit"/>
                     </form>
-                        
-                    <br>
-                    <p><%= rectArea %></p>
                     
                 </div>
                     
                 <div class="col-md-4">
                     
+                    <h3>Area of Circle</h3>
                     <form id="form2" name="form2" method="POST" action="<%= request.getContextPath() %>\calculator3?type=circ">
                         <h3>Radius: </h3><input id="radius" name="radius" type="text" value="<%= radius %>"/><br><br>
-                        <input class="btn" id="submit" name="submit" type="submit" value="Submit"/>
                     </form>
-                        
-                    <br>
-                    <p><%= circArea %></p>
                     
                 </div>
                     
                 <div class="col-md-4">
                     
+                    <h3>Area of Triangle</h3>
                     <form id="form3" name="form3" method="POST" action="<%= request.getContextPath() %>\calculator3?type=tri">
                         <h3>Height: </h3><input id="height" name="height" type="text" value="<%= height %>"/>
                         <h3>Base: </h3><input id="base" name="base" type="text" value="<%= base %>"/><br><br>
-                        <input class="btn" id="submit" name="submit" type="submit" value="Submit"/>
                     </form>
-                        
-                    <br>
-                    <p><%= triArea %></p>
-                    
+
                 </div>
             </div>
+                    
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Area: <%= rectArea %></h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>Area: <%= circArea %></h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>Area: <%= triArea %></h4>
+                </div>
+            </div>        
+                    
+            <div class="row">
+                <div class="col-md-4">
+                    <input class="btn-primary" id="form1Submit" name="form1Submit" type="submit" value="Submit" form="form1"/>
+                </div>
+                <div class="col-md-4">
+                    <input class="btn-primary" id="form2Submit" name="form2Submit" type="submit" value="Submit" form="form2"/>
+                </div>
+                <div class="col-md-4">
+                    <input class="btn-primary" id="form3Submit" name="form3Submit" type="submit" value="Submit" form="form3"/>
+                </div>
+            </div>
+                    
         </div>
+                    
         
-        <script src="../jquery-1.10.2.min.js"></script>
-        <script src="../bootstrap.min.js"></script>
+        
+        <script src="<%= request.getContextPath() %>/jquery-1.10.2.min.js"></script>
+        <script src="<%= request.getContextPath() %>/bootstrap.min.js"></script>
         
     </body>
 </html>

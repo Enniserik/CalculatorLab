@@ -18,7 +18,7 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a href="<%= request.getContextPath() %>\index.jsp" class="navbar-brand">Home</a>
+                    <a href="<%= request.getContextPath() %>/index.jsp" class="navbar-brand">Home</a>
             </div>
         </nav>
         
@@ -34,7 +34,7 @@
             </div>
         </div>
                  
-        <script src="jquery-1.10.2.min.js"></script>
-        <script src="bootstrap.min.js"></script>
+        <script src="<%= request.getContextPath() %>/jquery-1.10.2.min.js"></script>
+        <script src="<%= request.getContextPath() %>/bootstrap.min.js"></script>
     </body>
 </html>
