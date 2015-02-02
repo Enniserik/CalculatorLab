@@ -23,36 +23,36 @@
             
         <!--Replace this with EL-->       
         <%
-            Object lengthObj = request.getAttribute("length");
-            Object widthObj = request.getAttribute("width");
-            Object heightObj = request.getAttribute("height");
-            Object baseObj = request.getAttribute("base");
-            Object radiusObj = request.getAttribute("radius");
-            
-            
-            Object rectAreaObj = request.getAttribute("rectArea");
-            Object circAreaObj = request.getAttribute("circArea");
-            Object triAreaObj = request.getAttribute("triArea");
-            
-            String rectArea = "";
-            String circArea = "";
-            String triArea = "";
-            
-            rectArea = rectAreaObj == null ? rectArea : rectAreaObj.toString();
-            circArea = circAreaObj == null ? circArea : circAreaObj.toString();
-            triArea = triAreaObj == null ? triArea : triAreaObj.toString();
-            
-            String length = "0";
-            String width = "0";
-            String base = "0";
-            String height = "0";
-            String radius = "0";
-            
-            length = lengthObj == null ? length : lengthObj.toString();
-            width = widthObj == null ? width : widthObj.toString();
-            base = baseObj == null ? base : baseObj.toString();
-            height = heightObj == null ? height : heightObj.toString();
-            radius = radiusObj == null ? radius : radiusObj.toString();
+//            Object lengthObj = request.getAttribute("length");
+//            Object widthObj = request.getAttribute("width");
+//            Object heightObj = request.getAttribute("height");
+//            Object baseObj = request.getAttribute("base");
+//            Object radiusObj = request.getAttribute("radius");
+//            
+//            
+//            Object rectAreaObj = request.getAttribute("rectArea");
+//            Object circAreaObj = request.getAttribute("circArea");
+//            Object triAreaObj = request.getAttribute("triArea");
+//            
+//            String rectArea = "";
+//            String circArea = "";
+//            String triArea = "";
+//            
+//            rectArea = rectAreaObj == null ? rectArea : rectAreaObj.toString();
+//            circArea = circAreaObj == null ? circArea : circAreaObj.toString();
+//            triArea = triAreaObj == null ? triArea : triAreaObj.toString();
+//            
+//            String length = "0";
+//            String width = "0";
+//            String base = "0";
+//            String height = "0";
+//            String radius = "0";
+//            
+//            length = lengthObj == null ? length : lengthObj.toString();
+//            width = widthObj == null ? width : widthObj.toString();
+//            base = baseObj == null ? base : baseObj.toString();
+//            height = heightObj == null ? height : heightObj.toString();
+//            radius = radiusObj == null ? radius : radiusObj.toString();
             
         %>
         
@@ -64,8 +64,8 @@
                     
                             <h3>Area of Rectangle</h3>
                             <form id="form1" name="form1" method="POST" action="<%= request.getContextPath() %>\calculator3?type=rect">
-                                <h3>Length: </h3><input id="length" name="length" type="text" value="<%= length %>"/>
-                                <h3>Width: </h3><input id="width" name="width" type="text" value="<%= width %>"/><br><br>
+                                <h3>Length: </h3><input id="length" name="length" type="text" value="${length}"/>
+                                <h3>Width: </h3><input id="width" name="width" type="text" value="${width}"/><br><br>
                             </form>
                     
                         </div>
@@ -74,7 +74,7 @@
                     
                             <h3>Area of Circle</h3>
                             <form id="form2" name="form2" method="POST" action="<%= request.getContextPath() %>\calculator3?type=circ">
-                                <h3>Radius: </h3><input id="radius" name="radius" type="text" value="<%= radius %>"/><br><br>
+                                <h3>Radius: </h3><input id="radius" name="radius" type="text" value="${radius}"/><br><br>
                             </form>
                     
                         </div>
@@ -83,8 +83,8 @@
                     
                             <h3>Area of Triangle</h3>
                         <form id="form3" name="form3" method="POST" action="<%= request.getContextPath() %>\calculator3?type=tri">
-                                <h3>Height: </h3><input id="height" name="height" type="text" value="<%= height %>"/>
-                                <h3>Base: </h3><input id="base" name="base" type="text" value="<%= base %>"/><br><br>
+                                <h3>Height: </h3><input id="height" name="height" type="text" value="${height}"/>
+                                <h3>Base: </h3><input id="base" name="base" type="text" value="${base}"/><br><br>
                             </form>
 
                         </div>
@@ -92,13 +92,13 @@
                     
                     <div class="row">
                         <div class="col-md-4">
-                            <h4>Area: <%= rectArea %></h4>
+                            <h4>Area: ${rectArea}</h4>
                         </div>
                         <div class="col-md-4">
-                            <h4>Area: <%= circArea %></h4>
+                            <h4>Area: ${circArea}</h4>
                         </div>
                         <div class="col-md-4">
-                            <h4>Area: <%= triArea %></h4>
+                            <h4>Area: ${triArea}</h4>
                         </div>
                     </div>        
                     

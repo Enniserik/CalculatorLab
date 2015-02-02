@@ -29,6 +29,7 @@
                     <p><a href="lab1/Lab1Form.jsp">Go to Lab 1</a></p>
                     <p><a href="lab2/Lab2Form.jsp">Go to Lab 2</a></p>
                     <p><a href="lab3/Lab3Form.jsp">Go to Lab 3</a></p>
+                    <p><a href="lab4/Lab4Form.jsp">Go to Lab 4</a></p>
                     
                 </div>
             </div>
